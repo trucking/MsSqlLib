@@ -1,0 +1,6 @@
+D:\visual studio\MsSqlLib\MsSqlLib\bin\Debug\MsSqlLib.dll
+D:\visual studio\MsSqlLib\MsSqlLib\bin\Debug\MsSqlLib.pdb
+D:\visual studio\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.csprojAssemblyReference.cache
+D:\visual studio\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.csproj.CoreCompileInputs.cache
+D:\visual studio\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.dll
+D:\visual studio\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.pdb
