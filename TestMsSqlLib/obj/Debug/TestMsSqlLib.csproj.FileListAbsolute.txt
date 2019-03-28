@@ -8,3 +8,13 @@ D:\visual studio\MsSqlLib\TestMsSqlLib\obj\Debug\TestMsSqlLib.csproj.CopyComplet
 D:\visual studio\MsSqlLib\TestMsSqlLib\obj\Debug\TestMsSqlLib.exe
 D:\visual studio\MsSqlLib\TestMsSqlLib\obj\Debug\TestMsSqlLib.pdb
 D:\visual studio\MsSqlLib\TestMsSqlLib\bin\Debug\TestMsSqlLib.exe.config
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\bin\Debug\TestMsSqlLib.exe.config
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\bin\Debug\TestMsSqlLib.exe
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\bin\Debug\TestMsSqlLib.pdb
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\bin\Debug\MsSqlLib.dll
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\bin\Debug\MsSqlLib.pdb
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\obj\Debug\TestMsSqlLib.csprojAssemblyReference.cache
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\obj\Debug\TestMsSqlLib.csproj.CoreCompileInputs.cache
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\obj\Debug\TestMsSqlLib.csproj.CopyComplete
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\obj\Debug\TestMsSqlLib.exe
+D:\visual studio\c#\MsSqlLib\MsSqlLib\TestMsSqlLib\obj\Debug\TestMsSqlLib.pdb

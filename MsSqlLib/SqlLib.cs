@@ -15,7 +15,8 @@ namespace MsSqlLib
             this.Database = database;
             this.Username = username;
             this.Password = password;
-            this.ConnString = @"Data Source = (LocalDB)\test; Integrated Security = True; Connect Timeout = 3";
+            this.ConnString = @"Server="+server+";Integrated Security=False;Database="+database+";User="+username+";password="+password;
+            //this.ConnString = @"Data Source = (LocalDB)\test; Integrated Security = True; Connect Timeout = 3";
             this.Conn = new SqlConnection(this.ConnString);
             this.Conn.Open();
             this.Version = this.Conn.ServerVersion;
@@ -41,11 +42,10 @@ namespace MsSqlLib
         {
             return this.sql;
         }
-        //this is insert condition
-        //insert into table (item1,item2,item3,item4...) values (val1,val2,val3,val4...)
-        //or 
-        //insert into talbe (item1,item2,item3,item4...) valuse((val1,val2,val3,val4...),(val5...)...)
-        public int InsertOne(string table,List<string> itemList,List<string> valueList)
+        /*
+            Insert操作，参数分别为表名（string），字段（List<string>），值（List<string>)
+             */
+        public int Insert(string table,List<string> itemList,List<string> valueList)
         {
             this.sql = "insert into " + table + " (";
             foreach(string key in itemList)
@@ -53,16 +53,51 @@ namespace MsSqlLib
                 this.sql += key + ",";
             }
             this.sql = this.sql.TrimEnd(',');
-            this.sql += ") values(";
+            this.sql += ") values (";
             foreach(string value in valueList)
             {
                 this.sql += "'" + value + "',";
             }
             this.sql = this.sql.TrimEnd(',');
             this.sql += ")";
-            //SqlCommand command = new SqlCommand(this.sql,this.Conn);
-            //return command.ExecuteNonQuery();  
-            return 1;
+            SqlCommand command = new SqlCommand(this.sql,this.Conn);
+            return command.ExecuteNonQuery();  
+            //return 1;
+        }
+        /*
+         *  用于一次插入多条数据，Insert的重载
+        */
+        public int Insert(string table,List<string> itemList,List<List<string>> valueListArray)
+        {
+            this.sql = "insert into " + table + " (";
+            foreach (string key in itemList)
+            {
+                this.sql += key + ",";
+            }
+            this.sql = this.sql.TrimEnd(',');
+            this.sql += ") values ";
+            int i = 1;
+            foreach (List<string> value in valueListArray)
+            {
+                if(i == 1)
+                {
+                    this.sql += "(";
+                }
+                else
+                {
+                    this.sql += ",(";
+                }
+                foreach (string v in value)
+                {
+                    this.sql += "'" + v + "',";
+                }
+                this.sql = this.sql.TrimEnd(',');
+                this.sql += ")";
+                i++;
+            }            
+            SqlCommand command = new SqlCommand(this.sql, this.Conn);
+            return command.ExecuteNonQuery();
+            //return 1;
         }
         public int Delete()
         {

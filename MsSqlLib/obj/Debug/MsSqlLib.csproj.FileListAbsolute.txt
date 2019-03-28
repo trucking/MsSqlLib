@@ -4,3 +4,9 @@ D:\visual studio\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.csprojAssemblyReference.ca
 D:\visual studio\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.csproj.CoreCompileInputs.cache
 D:\visual studio\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.dll
 D:\visual studio\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.pdb
+D:\visual studio\c#\MsSqlLib\MsSqlLib\MsSqlLib\bin\Debug\MsSqlLib.dll
+D:\visual studio\c#\MsSqlLib\MsSqlLib\MsSqlLib\bin\Debug\MsSqlLib.pdb
+D:\visual studio\c#\MsSqlLib\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.csprojAssemblyReference.cache
+D:\visual studio\c#\MsSqlLib\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.csproj.CoreCompileInputs.cache
+D:\visual studio\c#\MsSqlLib\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.dll
+D:\visual studio\c#\MsSqlLib\MsSqlLib\MsSqlLib\obj\Debug\MsSqlLib.pdb
