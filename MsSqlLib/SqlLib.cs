@@ -43,8 +43,8 @@ namespace MsSqlLib
             return this.sql;
         }
         /*
-            Insert操作，参数分别为表名（string），字段（List<string>），值（List<string>)
-             */
+         *    Insert操作，参数分别为表名（string），字段（List<string>），值（List<string>)
+         */
         public int Insert(string table,List<string> itemList,List<string> valueList)
         {
             this.sql = "insert into " + table + " (";
@@ -66,7 +66,7 @@ namespace MsSqlLib
         }
         /*
          *  用于一次插入多条数据，Insert的重载
-        */
+         */
         public int Insert(string table,List<string> itemList,List<List<string>> valueListArray)
         {
             this.sql = "insert into " + table + " (";
@@ -99,18 +99,69 @@ namespace MsSqlLib
             return command.ExecuteNonQuery();
             //return 1;
         }
-        public int Delete()
+        /*
+         * delete sql statement is delete from table where ...
+         * where condition is maybe one or more conditions
+         * condition's structure while future 
+         */
+        public int Delete(string table,string condition)
         {
-            return 1;
+            this.sql = "delete from " + table + " where " + condition;
+            SqlCommand command = new SqlCommand(this.sql, this.Conn);
+            return command.ExecuteNonQuery();            
         }
-        public int Update()
+        /*
+         * Update sql statment is update table set params1 = value1,params2 = value2 ...where condition
+         */
+        public int Update(string table,Dictionary<string,string> keyValues,string condition)
         {
-            return 1;
+            this.sql = "update " + table + " set ";
+            foreach(var d in keyValues)
+            {
+                this.sql += d.Key + " = '" + d.Value + "',";
+            }
+            this.sql = this.sql.TrimEnd(',');
+            this.sql += " where " + condition;
+            SqlCommand command = new SqlCommand(this.sql, this.Conn);
+            return command.ExecuteNonQuery();
+            //return 1;
         }
-        public DataSet Select()
+
+        public DataSet Select(List<string> items,string table,string condition)
         {
             DataSet ds = new DataSet();
+            this.sql = "select ";
+            foreach(var item in items)
+            {
+                this.sql += item + ",";
+            }
+            this.sql = this.sql.TrimEnd(',');
+            this.sql += " from " + table + " where " + condition;
+            SqlCommand command = new SqlCommand(this.sql, this.Conn);
+            SqlDataAdapter da = new SqlDataAdapter(this.sql,this.Conn);
+            da.Fill(ds, table);
             return ds;
+        }
+
+        public DataSet Select(string table,string condition = null)
+        {
+            DataSet ds = new DataSet();
+            this.sql = "select * from " + table;
+            if(condition != null)
+            {
+                this.sql += " where " + condition;
+            }
+            SqlCommand command = new SqlCommand(this.sql, this.Conn);
+            SqlDataAdapter da = new SqlDataAdapter(this.sql, this.Conn);
+            da.Fill(ds, table);
+            return ds;
+        }
+
+        public void ExecuteSql(string sql)
+        {
+            this.sql = sql;
+            SqlCommand command = new SqlCommand(this.sql, this.Conn);
+            command.ExecuteNonQuery();
         }
         
     }
