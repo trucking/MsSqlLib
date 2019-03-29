@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsSqlLib", "MsSqlLib\MsSqlL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMsSqlLib", "TestMsSqlLib\TestMsSqlLib.csproj", "{8F1C3034-9794-4906-88B9-CD2BE5203358}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessLib", "AccessLib\AccessLib.csproj", "{CA83973D-29B1-4575-9354-960AD611E1C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8F1C3034-9794-4906-88B9-CD2BE5203358}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F1C3034-9794-4906-88B9-CD2BE5203358}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F1C3034-9794-4906-88B9-CD2BE5203358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA83973D-29B1-4575-9354-960AD611E1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA83973D-29B1-4575-9354-960AD611E1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA83973D-29B1-4575-9354-960AD611E1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA83973D-29B1-4575-9354-960AD611E1C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
